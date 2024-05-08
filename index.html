@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shoham Egozi </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Professional</a></li>
+            <li><a href="#personal">Personal</a></li>
+            <li><a href="#hobbies">Geeky</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1>Shoham Egozi</h1>
+        <img src="images/shoham.jpg" alt="Shoham Egozi" class="profile-photo">
+        <p> Hello There </p>
+    </section>
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <p>
+            Welcome! I'm Shoham Egozi, a dedicated DevOps Engineer with a deep-rooted passion for technology and a relentless drive for continuous learning and improvement. Beginning my career in Quality Assurance, I self-navigated the complex transition to DevOps through rigorous self-study and practical application, demonstrating a keen ability to adapt and master new technologies rapidly. My technical expertise is both wide-ranging and diverse, with particular expertise in Python, Groovy, Bash, and a strong command of automation tools and API testing environments such as Jenkins, Docker, Postman, and Selenium. I have effectively automated numerous manual processes, enhancing system reliability and team productivity, and have spearheaded major projects such as the integration of CI/CD pipelines and the seamless migration from Jira to Polarion,but I am also continuously expanding my skillset in web technologies including JavaScript, HTML, CSS, and the Playwright platform in my free time. This dedication to learning allows me to automate complex workflows and integrate sophisticated API solutions.
+            My background as a Tank Commander has honed my leadership skills and resilience, enabling me to lead projects with precision and confidence.
+        </p>
+    </section>
+    <section id="personal">
+        <h2>Personal Information</h2>
+        <p>
+            At 29 years old, I've just begun a new chapter of my life by getting married this year, grounding my roots in a family tradition of discipline and resilience, attributes inherited from my early childhood on a military base where my parents served as army officers(which today are highschool teachers). Beyond my professional pursuits as a DevOps Engineer, I'm an avid sports enthusiast with a passion for football, swimming, running, gym, pilates and yoga, maintaining a dynamic and balanced lifestyle. Each morning, I dedicate time to meditation, which helps clear my mind and infuses me with positive energy and enhanced concentration for the day ahead.
+
+            My personal interests don't stop at physical activities; I'm also deeply engrossed in the world of gaming, comics, and anime, which satisfy my geeky side and spark hours of engaging conversations and debates. When not gaming or catching up on the latest anime release, you can find me immersed in the latest movies and TV series, always eager to discuss and dissect the narratives and cinematography with friends and fellow fans. This blend of interests and activities not only keeps me energized and continually learning but also enriches my creativity and problem-solving skills in all areas of life.
+                        
+        </p>
+    </section>
+    <section id="hobbies">
+        <h2>My Geeky Favorite</h2>
+        <button class="hobby-button">Favorite Games</button>
+        <div class="images-grid" id="favoritegames" style="display:none;">
+            <img src="images/Elden_ring.jpg" alt="Elden Ring">
+            <img src="images/crashh.avif" alt="Crash Bandicoot">
+            <img src="images/Sekiro_art.jpg" alt="Sekiro Shadows Die Twice">
+            <img src="images/darksouls.jpg" alt="Dark Souls">
+            <img src="images/rachet.jpg" alt="Ratchet and Clank">
+            <img src="images/horizon.jpg" alt="Horizon">
+            <img src="images/Nioh_2_cover_art.jpg" alt="Nioh2">
+            <img src="images/bloodborne.jpg" alt="bloodborne">
+        </div>
+        <button class="hobby-button">Favorite Movies</button>
+        <div class="images-grid" id="favoritemovies" style="display:none;">
+            <img src="images/trilogy.jpg" alt="Movie Trilogy">
+            <img src="images/intersteller.jpg" alt="Interstellar">
+            <img src="images/inception.jpg" alt="Inception">
+            <img src="images/endgame.jpg" alt="Avengers: Endgame">
+            <img src="images/guardians.jpg" alt="Guardians of the Galaxy">
+            <img src="images/SILENCE-OF-THE-LAMBS.jpg" alt="Silence of the Lambs">
+            <img src="images/matrix.jpg" alt="Matrix">
+            <img src="images/the_prestige.jpg" alt="The Prestige">
+        </div>
+        <button class="hobby-button">TV Shows</button>
+        <div class="images-grid" id="tvshows" style="display:none;">
+            <img src="images/rick.jpg" alt="Rick and Morty">
+            <img src="images/friends.jpg" alt="Friends">
+            <img src="images/True_Detective_season_1.png" alt="True Detective">
+            <img src="images/attack.jpg" alt="Attack on Titan">
+            <img src="images/sherlock.jpg" alt="Sherlock">
+            <img src="images/TheOffice_S7_DVD.jpg" alt="The Office">
+            <img src="images/x-files.jpg" alt="X-Files">
+            <img src="images/batmantheanimated.jpg" alt="Batman">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you’d like to get in touch, feel free to reach out through any of the following platforms:</p>
+        <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> Email: <a href="mailto:shohamegozi@gmail.com">shohamegozi@gmail.com</a></li>
+            <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/shoham-egozi-475b7a182" target="_blank">View my profile</a></li>
+            <li><i class="fas fa-phone"></i> Phone: <a href="tel:050-488-9804">050-488-9804</a></li>
+        </ul>
+    </section>
+    <footer>
+        <p>© 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var buttons = document.querySelectorAll('.hobby-button');
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // This assumes the ID is the button text in lowercase with no spaces
+                var hobbyName = button.textContent.toLowerCase().replace(/\s+/g, '');
+                var grid = document.getElementById(hobbyName);
+                if (grid) {
+                    grid.style.display = grid.style.display === 'none' ? 'block' : 'none';
+                } else {
+                    console.log('No element with ID:', hobbyName);
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
